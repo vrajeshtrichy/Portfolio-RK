@@ -352,6 +352,7 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+  margin: 5px;
 }
 
 .info_more-btn {
@@ -1842,7 +1843,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     text-align: center;
   }
 
-  .info-content .title { margin: auto; }
+  .info-content .title { 
+    margin: 5px auto 5px auto; 
+  }
 
   .info_more-btn { display: none; }
 
