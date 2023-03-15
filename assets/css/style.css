@@ -352,7 +352,8 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
-  margin: 5px;
+  /* margin: 5px; */
+  margin: 5px auto 5px auto; 
 }
 
 .info_more-btn {
@@ -602,8 +603,8 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
   display: -webkit-box;
-  line-clamp: 4;
-  -webkit-line-clamp: 4;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1436,8 +1437,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .testimonials-text {
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
   }
 
   /* testimonials modal */
