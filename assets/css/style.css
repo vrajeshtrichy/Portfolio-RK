@@ -671,7 +671,26 @@ main {
   z-index: 2;
 }
 
+.projects-modal {
+  background: var(--eerie-black-2);
+  position: relative;
+  padding: 15px;
+  margin: 15px 12px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  transform: scale(1.2);
+  opacity: 0;
+  transition: var(--transition-1);
+  z-index: 2;
+}
+
 .modal-container.active .testimonials-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-container.active .projects-modal {
   transform: scale(1);
   opacity: 1;
 }
@@ -836,7 +855,7 @@ main {
  * skills 
  */
 
-.skills-title { margin-bottom: 20px; }
+.skills-title { margin-bottom: 20px; margin-top: 20px;}
 
 .skills-list { padding: 20px; }
 
@@ -1454,6 +1473,15 @@ textarea.form-input::-webkit-resizer { display: none; }
     border-radius: 20px;
   }
 
+  .projects-modal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 25px;
+    padding: 30px;
+    border-radius: 20px;
+  }
+
   .modal-img-wrapper {
     display: flex;
     flex-direction: column;
@@ -1589,6 +1617,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* testimonials modal */
 
   .testimonials-modal {
+    gap: 35px;
+    max-width: 680px;
+  }
+
+  .projects-modal {
     gap: 35px;
     max-width: 680px;
   }

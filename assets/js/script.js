@@ -22,15 +22,30 @@ const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
+// Projects variables
+const projectsItem = document.querySelectorAll("[data-projects-item]");
+const projectModalContainer = document.querySelector("[project-modal-container]");
+const projectModalCloseBtn = document.querySelector("[project-modal-close-btn]");
+const projectDataOverlay = document.querySelector("[project-data-overlay]");
+
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
+const projectModalTitle = document.querySelector("[project-modal-title]");
+const projectModalText = document.querySelector("[project-modal-text]");
+
 // modal toggle function
-const testimonialsModalFunc = function () {
+const modalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
+}
+
+// modal toggle function
+const projectModalFunc = function () {
+  projectModalContainer.classList.toggle("active");
+  projectDataOverlay.classList.toggle("active");
 }
 
 // add click event to all modal items
@@ -43,15 +58,33 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
-    testimonialsModalFunc();
+    modalFunc();
+
+  });
+
+}
+
+// add click event to all modal items
+for (let i = 0; i < projectsItem.length; i++) {
+
+  projectsItem[i].addEventListener("click", function () {
+
+    projectModalTitle.innerHTML = this.querySelector("[data-projects-title]").innerHTML;
+    projectModalText.innerHTML = this.querySelector("[data-projects-text]").innerHTML;
+    // console.log("yes");
+    projectModalFunc();
 
   });
 
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+modalCloseBtn.addEventListener("click", modalFunc);
+overlay.addEventListener("click", modalFunc);
+
+// add click event to modal close button
+projectModalCloseBtn.addEventListener("click", projectModalFunc);
+projectDataOverlay.addEventListener("click", projectModalFunc);
 
 
 
